@@ -57,4 +57,6 @@ build/
 .vscode/
 
 # macOS binary files
-*
+self-exercise/Leet2555
+
+for-clion/
