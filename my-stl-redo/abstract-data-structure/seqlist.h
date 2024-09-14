@@ -1,5 +1,25 @@
-#include "seqlist.h"
+#ifndef __SEQLIST_H__
+#define __SEQLIST_H__
+
 #include <stdexcept>
+
+const long long MAX_SIZE = 2147483647;
+const int DEFAULT_CAPACITY = 100;
+
+template<class T>
+class SeqList {
+public:
+    SeqList();
+    virtual ~SeqList();
+
+protected:
+    T* arr;
+    int size;
+    int capacity;
+
+    void expand();  // 扩容
+};
+
 
 #define _TPL template<class T>
 #define _SL SeqList<T>
@@ -31,3 +51,4 @@ void _SL::expand() {
     delete[]arr;
     arr = newArr;
 }
+#endif
